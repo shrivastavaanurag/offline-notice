@@ -8,10 +8,6 @@ Notify the user is offline.
 npm install react-native-offline-notice
 ```
 
-```sh
-yarn add react-native-offline-notice
-```
-
 ## Usage
 
 
