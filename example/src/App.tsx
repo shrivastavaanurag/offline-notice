@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-offline-notice';
+import { OfflineNotice } from 'react-native-offline-notice';
 
 export default function App() {
   const [result, setResult] = useState<number | undefined>();
 
   useEffect(() => {
-    multiply(3, 7).then(setResult);
+    
   }, []);
 
   return (
     <View style={styles.container}>
+        <OfflineNotice />
       <Text>Result: {result}</Text>
     </View>
   );
