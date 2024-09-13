@@ -16,11 +16,34 @@ yarn add react-native-offline-notice
 
 
 ```js
-import { multiply } from 'react-native-offline-notice';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { OfflineNotice } from 'react-native-offline-notice';
 
 // ...
 
-const result = await multiply(3, 7);
+export default function App() {
+ 
+  return (
+    <View style={styles.container}>
+      <OfflineNotice />
+      {/* other code */}
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  box: {
+    width: 60,
+    height: 60,
+    marginVertical: 20,
+  },
+});
 ```
 
 
